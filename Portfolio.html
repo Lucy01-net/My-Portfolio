@@ -1,0 +1,97 @@
+<!--Home Page of an electronic portfolio-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--Linking this html to a css file-->
+<link rel="stylesheet" type="text/css" href="Home_page.css">
+
+
+<title>My portfolio website</title>
+<meta charset="utf-8">
+<meta name="Description" content="Home page fo my electronic portfolio">
+<meta name="author" content="Anne Christie Alexandre">
+</head>
+
+<body>
+<!--Header section-->
+<header>
+<h1> Welcome to my portfolio </h1>
+<nav>
+<!--Placeholder links for future pages-->
+<ul>
+<li><a href="#home"> Home </a></li>
+<li><a href="#about"> About Me</a></li>
+<li><a href="#goals"> Career goals </a></li>
+<li><a href="#projects"> My projects </a></li>
+</ul>
+
+</nav>
+</header>
+
+<!--Main content section-->
+<main>
+
+<section id="home" class="active">
+    <h2>Home</h2>
+    <p>Welcome to my portfolio! Use the navigation above to explore my work, goals, and projects.</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I’m Anne — a web developer and IT professional who loves turning ideas into interactive, meaningful digital experiences. My path into tech has been shaped by curiosity and a genuine desire to understand how things work. Whether I’m building a website, troubleshooting a system, or helping someone navigate a technical challenge, I approach every problem with patience, clarity, and creativity.</p>
+
+    <p>I’ve gained hands‑on experience in technical support, networking fundamentals, software and hardware diagnostics, and mobile application troubleshooting. These experiences taught me how to think critically, communicate clearly, and stay calm under pressure. On the development side, I work with Python, C#, Java, MySQL, and modern tools to create dynamic, user‑friendly websites.</p>
+
+    <p>Finishing this portfolio feels like a milestone — a reflection of the work, growth, and late nights that brought me here. I’m excited to continue evolving as a developer and to bring my blend of technical skill, curiosity, and heart into every project I create.</p>
+</section>
+
+<section id="goals">
+    <h2>Career Goals</h2>
+    <p>I’m a passionate web developer and IT professional with a deep commitment to building seamless digital experiences. My background spans hands‑on troubleshooting, technical support, networking fundamentals, and OS‑level diagnostics — giving me a strong understanding of how technology works behind the scenes.</p>
+
+    <p>I’ve supported mobile applications, resolved connectivity issues, and maintained clear documentation in CRM and ticketing systems. My technical toolkit includes Python, C#, Java, MySQL, and a range of modern IT tools. What drives me is the ability to turn complex problems into simple, elegant solutions.</p>
+
+    <p>I’m excited to continue growing in software and web development, creating work that is both functional and meaningful.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Quiz Project:</strong> A multiple-choice quiz app built with HTML, CSS, and JavaScript.</li>
+        <li><strong>BMI Calculator:</strong> A tool that calculates BMI using user input.</li>
+        <li><strong>Clock Project:</strong> A real-time digital clock built with JavaScript.</li>
+        <li><strong>Pong Game:</strong> A classic Pong game built with HTML, CSS, and JavaScript.</li>
+        <li><strong>Rock Paper Scissors:</strong> A web-based game against the computer.</li>
+        <li><strong>Task Manager Web App:</strong> A Python-based task management tool.</li>
+    </ul>
+</section>
+
+</main>
+
+
+<!--Footer Section-->
+<footer> 
+<p>If you have any questions or would like to get in touch, feel free to reach out via <a href="#">annechristiealexandre19@gmail.com</a>.</p>
+<p>And if you're interested in my work, you can also check out my <a href="https://github.com/Lucy01-net/Task-Manager">GitHub</a> profile.</p>
+</footer>
+
+<!--JavaScript-->
+<script>
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        const target = this.getAttribute("href").replace("#", "");
+
+        document.querySelectorAll("main section").forEach(sec => {
+            sec.classList.remove("active");
+        });
+
+        document.getElementById(target).classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
